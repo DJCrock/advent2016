@@ -43,8 +43,6 @@ fs.readFile('./input.txt', 'utf8', function(err, data) {
       distance:  parseInt(step.substring(1))
     };
   });
-  var x = 0;
-  var y = 0;
   steps.forEach(function(step) {
     state.direction = directions[state.direction[step.direction]];
     while(step.distance !== 0) {
