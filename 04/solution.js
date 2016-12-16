@@ -6,7 +6,7 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var roomRegex = /((?:[a-z]+-)+[a-z]+)-([0-9]+)\[([a-z]+)\]/;
 
 var countChars = function(acc, cha) {
-  acc[cha] = acc[cha] ? acc[cha] + 1 : 1;
+  acc[cha] = (acc[cha] || 0) + 1;
   return acc;
 };
 
